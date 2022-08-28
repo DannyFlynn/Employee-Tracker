@@ -1,0 +1,39 @@
+<div class="searchbox-model" id="searchbox">
+  <div class="search-container">
+    <input
+      type="text"
+      name="name"
+      id="singleEmployee"
+      placeholder="full-name"
+    />
+    <button id="findEmployee">search</button>
+    <div class="close-btn-wrap">
+      <button id="closeSearchModel">X</button>
+    </div>
+  </div>
+  <div id="employee-found-wrap">
+    <div id="employee-found">
+      <h4>
+        Name: <span id="nameFound"></span
+        ><input type="text" id="editName" class="edit-employee" />
+      </h4>
+      <h4>
+        Email: <span id="emailFound"></span
+        ><input type="text" id="editEmail" class="edit-employee" />
+      </h4>
+      <h4>
+        Department: <span id="departmentFound"></span
+        ><input type="text" id="editDepartment" class="edit-employee" />
+      </h4>
+      <h4>
+        Location: <span id="locationFound"></span
+        ><input type="text" id="editLocation" class="edit-employee" />
+      </h4>
+      <button id="edit">edit</button>
+      <button id="submitUpdate">submit</button>
+    </div>
+  </div>
+  <div class="edit-employee">
+    <div class="employee-edited"></div>
+  </div>
+</div>

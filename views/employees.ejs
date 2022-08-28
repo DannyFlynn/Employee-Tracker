@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--just displaying most thinds by partials just to break up code to different files to make code easiar to read and break it up into small pieces-->
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <!--Container-->
+    <div class="container">
+      <!--Nav-->
+      <%- include('./partials/nav.ejs') %>
+
+      <!--table-->
+      <table id="employeeData">
+        <thead>
+          <th class="name-column">Name:</th>
+          <th class="phone-table-email">Email:</th>
+          <th>Department:</th>
+          <th class="phone-table-location">Location:</th>
+          <th>Delete:</th>
+        </thead>
+        <tbody class="color"><% for(let i = 0; i < employees.length; i++) { %>
+          <tr class="colorRow">
+
+            <td><%= employees[i]["name"]%></td>
+            <td class="phone-table-email"><%= employees[i]["email"]%></td>
+            <td><%= employees[i]["department"]%></td>
+            <td class="phone-table-location"><%= employees[i]["location"]%></td>
+            <td ><i class="fa-solid fa-trash-can fa-lg deleteEmployee" id="<%= employees[i]["id"] %>"></i></td>
+          </tr>
+          <% } %></tbody>
+      </table>
+
+      <!--search model after search clicked-->
+      <%- include('./partials/searchbox.ejs') %>
+
+      <!--Create employee model after button cliced-->
+      <%- include('./partials/createEmployee.ejs') %>
+      
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

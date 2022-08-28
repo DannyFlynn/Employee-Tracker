@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+  
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: #2b9fdd;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    margin: 0 0 0 15px;
+}
+
+.brand-mobile {
+    display: none;
+}
+
+.button-container {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-button {
+    margin: 0 25px 0 0;
+    cursor: pointer;
+}
+
+
+.fa-magnifying-glass:hover {
+    color: #5ff526;
+}
+
+.fa-plus:hover {
+    color: #5ff526;
+}
+
+/*Table */
+ table {
+    width: 100%;
+    overflow: scroll;
+ }
+
+ th {
+    width: 20%;
+    background-color: #d0d0fa;
+ }
+
+ tr {
+    height: 30px;
+ }
+
+ td {
+    width: 20%;
+    
+    text-align: center;
+ }
+
+.fa-trash-can:hover {
+    color: red;
+    cursor: pointer;
+    
+}
+
+/*model on search button clicked */
+.searchbox-model {
+    display: none;
+    width: 30%;
+    height: 90%;
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    left: 35%;
+    background-color: #d0d0fa;
+}
+
+.search-container {
+    width: 100%;
+    height: 10%;
+    background-color: #2b9fdd;
+    display: flex;
+    align-items: center;
+}
+
+#singleEmployee {
+    margin: 0 0 0 10px;
+    width: 40%;
+    height: 30%;
+}
+
+#findEmployee {
+    height: 40%;
+}
+
+
+.close-btn-wrap {
+    width: 40%;
+    text-align: end;
+}
+
+#closeSearchModel {
+    background-color: #2b9fdd;
+    border: 3px solid white;
+    font-weight: bold;
+    color: white;
+
+    font-size: 16px;
+}
+
+#closeSearchModel:hover {
+  color: red;
+  border-color: red;
+}
+
+#employee-found-wrap {
+    width: 100%;
+    height: 90%;
+    display: none;
+    font-size: 18px;
+}
+
+#employee-found {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+#edit {
+    width: 120px;
+    height: 40px;
+    background-color: #2b9fdd;
+    border: 3px solid white;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#edit:hover {
+    border-color: #5ff526;
+    color: #5ff526;
+}
+
+#submitUpdate {
+    width: 120px;
+    height: 40px;
+    background-color: #2b9fdd;
+    border: 3px solid white;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#submitUpdate:hover {
+    border-color: #5ff526;
+    color: #5ff526;
+}
+
+
+/*model on create-employee button clicked */
+.create-model {
+    display: none;
+    width: 30%;
+    height: 90%;
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    left: 35%;
+}
+
+.create-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d0d0fa;
+    
+}
+
+.title-container {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b9fdd;
+    color: white;
+    font-size: 24px;
+}
+
+#created:hover {
+    border-color: #5ff526;
+    color: #5ff526;
+}
+.create-title {
+  margin: 0 0 0 10px;
+}
+
+
+
+#close {
+    margin: 0 10px 0 0;
+    background-color: #2b9fdd;
+    border: 3px solid white;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+#close:hover {
+  color: red;
+  border-color: red;
+}
+
+.input-create {
+    width: 80%;
+    height: 20px;
+    margin: 60px 0 0 0;
+}
+
+#created {
+    margin: 30px 0 0 0;
+    width: 100px;
+    height: 35px;
+    background-color: #2b9fdd;
+    color: white;
+    border: 3px solid white;
+    cursor: pointer;
+}
+
+/*basic error handling if user tries to create with empty strings these will display */
+#nameError, #emailError,
+#departmentError, #locationError {
+    display: none;
+}
+
+/*All inputs*/
+
+input {
+    font-weight: bold;
+}
+
+p {
+    color: red;
+}
+
+
+
+
+
+/*portrait mobile phone */
+
+@media screen and (max-width: 450px){
+    
+    nav {
+        height: 50px;
+    }
+
+    .brand {
+        display: none;
+    }
+    
+    .button-container {
+        width: 40%;
+        justify-content: space-around;
+    }
+    .nav-button {
+       margin: 0;
+    }
+
+    .brand-mobile {
+        font-size: 18px;
+        margin: 0 0 0 10px;
+        display: block;
+    }
+
+    .phone-table-email {
+        display: none;
+    }
+    
+    .phone-table-location {
+        display: none;
+    }
+
+    .searchbox-model {
+        width: 90%;
+        height: 90%;
+        top: 2%;
+        left: 5%;
+    }
+
+    #employee-found {
+        font-size: 16px;
+        
+    }
+    
+    .create-model {
+        width: 90%;
+        height: 80%;
+        top: 15%;
+        left: 5%;
+    }
+
+    .close-btn-wrap {
+        width: 30%;
+    }
+    
+    .create-model {
+       height: 90%;
+       top: 2%; 
+    }
+
+    
+    
+    p {
+        font-size: 16px;
+    }
+}
+
